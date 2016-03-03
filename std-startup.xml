@@ -1,0 +1,27 @@
+<aiml version="1.0">
+
+<!-- This category works with the Standard AIML Set -->
+<category>
+<pattern>LOAD STD</pattern>
+<template>
+
+<!-- Load standard AIML set -->
+<learn>standard/*.aiml</learn>
+</template>
+</category>
+
+<category>
+  <pattern>LOAD OTHER</pattern>
+  <template>
+    <learn>supplement/*.aiml</learn>
+  </template>
+</category>
+
+<category>
+  <pattern>LOAD *</pattern>
+  <template>
+    <learn>dynamic/<star/>.aiml</learn>
+  </template>
+</category>
+
+</aiml>
